@@ -1,0 +1,11 @@
+ $ bc.io
+ $ die bc.io +noall +answer -t AAAA
+> bc.io     3600    IN AAAA     2606:50c0:8000::153
+> bc.io     3600    IN AAAA     2606:50c0:8001::153
+> bc.io    3600    IN AAAA     2606:50c0:8002::153
+> bc.io     3600    IN AAAA     2606:50c0:8003::153
+ $ dig bc.io +noall +answer -t A
+> bc.io   3600    IN A     185.199.108.153
+> bc.io    3600    IN A     185.199.109.153
+> bc.io    3600    IN A     185.199.110.153
+> bc.io    3600    IN A     185.199.111.153
