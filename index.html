@@ -42,3 +42,13 @@ document.write "现在时间：" & Time
 </CENTER>
 </BODY>
 </HTML>
+[General]
+dns-server = 1.1.1.1, 223.5.5.5
+
+[Proxy]
+Direct = direct
+Reject = reject
+
+[Rule]
+EXTERNAL, site:category-ads-all, Reject
+FINAL, Direct
