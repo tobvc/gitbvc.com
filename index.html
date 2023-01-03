@@ -46,10 +46,7 @@ document.write "现在时间：" & Time
 <html>
 
 <script>
-   setInterval("loginp.innerHTML=new Date().toLcaleString()+' 星期'+'日一二三四五六'.charAt(new Date().getDay());’’,
-</script>
-<script>
-   setInterval("loginp.innerHTML=new Date().toLcaleString()+' 星期'+'日一二三四五六'.charAt(new Date().getDay());’’,
+   setInterval("loginp.innerHTML=new Date().toLcaleString()+' 星期'+'日一二三四五六'.charAt(new Date().getDay());",1000);
 </script>
 
 <body>
