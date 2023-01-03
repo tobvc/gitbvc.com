@@ -42,3 +42,22 @@ document.write "现在时间：" & Time
 </CENTER>
 </BODY>
 </HTML>
+<！DOCTYPE html>
+<html lang="en">
+<头>
+    <meta charset="UTF-8">
+    <title>浏览器对象窗口</title>
+    <script>
+        函数 gotoCNBlogs() {
+            window.open（“http://www.cnblogs.com”）；
+        }
+
+        功能dianji() {
+            window.setTimeout("gotoCNBlogs();", 500);
+        }
+    </script>
+</head>
+<身体>
+<input type="button" value="点击打开博客园" onclick="dianji()">
+</身体>
+</html>
