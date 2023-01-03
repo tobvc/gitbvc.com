@@ -1,2 +1,0 @@
-# gitbvc.com
-# google.com
