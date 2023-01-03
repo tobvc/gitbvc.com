@@ -2,3 +2,27 @@
 </a>
 <a href="google.com"target="_blank"><img src"https://www.google.com/img/logo.jpg"width="40"height="40"alt="Google"border="0">
 </a>
+Snapshots
+function showPic(whichpic){
+
+var source = whichpic.getAttribute("data-img");
+
+var placeholder = document.getElementById('placeholder');
+
+placeholder.setAttribute("src",source)
+
+var text =whichpic.getAttribute('title');
+
+var description = document.getElementById("description");
+
+description.firstChild.nodeValue = text;
+
+}
+
+function countBodyChildren(){
+
+var body_element = document.getElementsByTagName('body')[0];
+
+}
+
+window.onload = countBodyChildren;
