@@ -24,36 +24,316 @@
 </ul>
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="UTF-8">
-	<title>upload</title>
-</head>
-<body>
-	<script type="text/javascript">
-		function clp(){
-			return document.getElementById('fileIa').click();
-		}
-		function up(){
-			var file = document.getElementById("file").files[0],        
-     		form = new FormData(),
-    		 req = new XMLHttpRequest();
-    		 form.append("file", file);
-     		req.onreadystatechange = function() {
-        	if(req.readyState === 4 && req.status === 200) {
-            	// 回调函数
-       		 }
-     		req.open("post", 'URL', true);
-     		req.send(form);
-		}
+	<head>
+		<meta charset="utf-8"/>
+		<title>主页</title>
+		<link rel="stylesheet" href="./css/header_config.css"/>
+		<link rel="stylesheet" href="css/config.css"/>
+		<link rel="stylesheet" href="css/main_config.css"/>
+		<link rel="stylesheet" href="./css/footer_config.css"/>
+		<!--樱花特效在线引入-->
+	</head>
+	<body style="background-image: url(img/bg/bk.png);">
+		<header class="site_header">
+			<figure class="centerbg" style="background-image: url(./img/00.jpg);height: 1080px;">
+				<div class="header_info">
+					<h1 class="header_info_title">
+						Hi, Althumi
+					</h1>
+					<div class="header_info_content">
+						<p>
+							<i class="fa fa-quote-left"></i>
+							 You got to put the past behind you before you can move on. 
+							<i class="fa fa-quote-right"></i>
+						</p>
+						<div class="shar_list">
+							<li id="bg_pre">
+								<img class="flipx" src="./img/01.jpg" style="transform: rotate(180deg);">
+							</li>
+							<li id="qq">
+								<img class="qq"  src="./img/02.jpg">
+							</li>
+							<li id="github">
+								<img class="github"  src="./img/03.jpg">
+							</li>
+							<li id="bilibili">
+								<img class="bilibili"  src="./img/04.jpg">
+							</li>
+							<li id="wangyiyun">
+								<img class="wangyiyun"  src="./img/05.jpg">
+							</li>
+							<li id="jianshu">
+								<img class="jianshu"  src="./img/06.jpg">
+							</li>
+							<li id="zhihu">
+								<img class="zhihu"  src="./img/01.jpg">
+							</li>
+							<li id="csdn">
+								<img class="csdn" src="./img/02.jpg">
+							</li>
+							<li id="bg-next">
+								<img  src="./img/03.jpg">
+							</li>
+						</div>
+					</div>
+				</div>
+			</figure>
+			<div class="headertop-down">
+				<span><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
+			</div>
+		</header>
+		
+		<div class="main">
+			<header class="main_header">
+				<div class="site_top">
+					<div class="site_branding">
+						<h1><a href="#" target="_self">たかぎ</a></h1>
+					</div>
+					<div class="user_head_photo">
+						<img src="img/01.jpg" width="30px" height="30px"/>
+						<div class="user_head_photo_menu">
+							<div class="user_head_photo_menu_name">
+								Althumi
+							</div>
+						</div>
+					</div>
+					<div class="searchbox">
+						<i class="fa fa-search fa-2x" aria-hidden="true" style="font-size: 26px"></i>
+					</div>
+					<div class="top_nav">
+						<div class="lower">
+							<nav class="navbar" style="display: block !important;">
+								<ul>
+									<li>
+										<a href="./index.html" target="_self">
+											<i class="fa fa-fort-awesome"></i>首页
+										</a>
+									</li>
+									<li>
+										<a href="./file.html" target="_self">
+											<i class="fa fa-archive faa-shake" aria-hidden="true"></i>归档
+										</a>
+									</li>
+									<li>
+										<a href="./detailed_list.html" target="_self">
+											<i class="fa fa-list-ul faa-vertical" aria-hidden="true"></i>清单
+										</a>
+									</li>
+									<li>
+										<a href="./mood.html" target="_self">
+											<i class="fa fa-calendar-o  faa-tada" aria-hidden="true"></i>心情
+										</a>
+									</li>
+									<li>
+										<a href="./gallery.html" target="_self">
+											<i class="fa fa-camera faa-flash" aria-hidden="true"></i> 画廊
+										</a>
+									</li>
+									<li>
+										<a href="./Message_Board.html" target="_self">
+											<i class="fa fa-pencil-square-o  faa-tada" aria-hidden="true"></i>留言板
+										</a>
+									</li>
+									<li>
+										<a href="./Friends_account.html" target="_self">
+											<i class="fa fa-link faa-shake" aria-hidden="true"></i>友人帐
+										</a>
+									</li>
+									<li>
+										<a href="./reward.html" target="_self">
+											<i class="fa fa-heart faa-pulse" aria-hidden="true"></i>赞赏
+										</a>
+									</li>
+									<li>
+										<a href="./about.html" target="_self">
+											<i class="fa fa-leaf faa-wrench" aria-hidden="true"></i>关于
+										</a>
+									</li>
+									<li>
+										<a href="#" target="_self">
+											<i class="fa fa-magic" aria-hidden="true" onclick="window.alert('未开发，敬请期待')"></i>实验室
+										</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</header>
+			<div class="main_content" style="background-color: rgba(255, 255, 255, 0.8);">
+				<div class="notice" style="margin-top: 20px;">
+					<i class="fa fa-bullhorn" aria-hidden="true"></i>
+					<div class="notice-content">一盏灯，一台电脑，一个人，一个传奇！</div>
+				</div>
+				<div class="top_feature">
+					<h1 class="tf_title" style="font-family: 'Ubuntu', sans-serif;">
+						<i class="fa fa-anchor" aria-hidden="true"></i>
+						<span> START:DASH!!</span>
+					</h1>
+					<div class="tf_content">
+						<a href="#" target="_blank">
+							<div class="img">
+								<img src="img/02.jpg"/>
+							</div>
+							<div class="info">
+								<h3>
+									【大作业日志】
+								</h3>
+								<p>
+									入坑前端就在今天这一天！
+								</p>
+							</div>
+						</a>
+					</div>
+					<div class="tf_content">
+						<a href="#" target="_blank">
+							<div class="img">
+								<img src="./img/03.jpg"  width="256px" height="160px" />
+							</div>
+							<div class="info">
+								<h3>
+									【ICPC】拿牌最重要！
+								</h3>
+								<p>
+									每天学习算法3小时，一年拿铜，两年拿银
+								</p>
+							</div>
+						</a>
+					</div>
+					<div class="tf_content">
+						<a href="#" target="_blank">
+							<div class="img">
+								<img src="./img/04.jpg" />
+							</div>
+							<div class="info">
+								<h3>
+									【四月是你的谎言】四月はあなたの嘘です。
+								</h3>
+								<p>
+								好好看。555！
+								</p>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="content_area">
+					<main class="site_main">
+						<h1 class="main_title" style="font-family: 'Ubuntu', sans-serif;">
+							<i class="fa fa-envira" aria-hidden="true"></i>发现
+						</h1>
+						<article class="post_content">
+							<div class="post_content_img">
+								<a href="#">
+									<img src="https://api.lixingyong.com/api/images?type=url&itype=image&kind=random" width="auto" height="100%"/>
+								</a>
+							</div>
+							<div class="post_content_text">
+								<div class="post_date">
+									<i class="fa fa-clock-o" aria-hidden="true"></i>发布于2021/6/19 &nbsp;<i class="fa fa-fire" aria-hidden="true"></i>
+								</div>
+								<a class="post_title" href="#" target="_self">
+									<h3>【网页设计】二次元网站制作方法</h3>
+								</a>
+								<div class="post_meta">
+									<span>
+										<i class="fa fa-eye" aria-hidden="true"></i> 1314w热度
+									</span>
+									<span class="mid_num">
+										<i class="fa fa-commenting-o" aria-hidden="true"></i> 520w评论
+									</span>
+									<span>
+										<i class="fa fa-folder-open-o" aria-hidden="true"></i>开源项目
+									</span>
+								</div>
+								<div class="float_content">
+									<p>
+										学习博客框架体系Halo里的Sakura主题，能够轻松制作二次元博客网站。快人一步的体验到二次元与网页设计的结合更能充分个人对此项技能的兴趣！欧耶。
+									</p>
+								</div>
+								<div class="post_bottom">
+									<a href="#">
+										<i class="fa fa-ellipsis-h fa-2x" aria-hidden="true"></i>
+									</a>
+								</div>
+							</div>
+						</article>
+						<article class="post_content">
+							<div class="post_content_img">
+								<a href="#">
+									<img src="https://api.lixingyong.com/api/images?type=url&itype=image&kind=4565" width="auto" height="100%"/>
+								</a>
+							</div>
+							<div class="post_content_text">
+								<div class="post_date">
+									<i class="fa fa-clock-o" aria-hidden="true"></i>发布于2021/6/19 &nbsp;<i class="fa fa-fire" aria-hidden="true"></i>
+								</div>
+								<a class="post_title" href="#" target="_self">
+									<h3>【算法】模拟退火算法的综合应用</h3>
+								</a>
+								<div class="post_meta">
+									<span>
+										<i class="fa fa-eye" aria-hidden="true"></i> 1314w热度
+									</span>
+									<span class="mid_num">
+										<i class="fa fa-commenting-o" aria-hidden="true"></i> 520w评论
+									</span>
+									<span>
+										<i class="fa fa-folder-open-o" aria-hidden="true"></i>开源项目
+									</span>
+								</div>
+								<div class="float_content">
+									<p>
+										模拟退火是在打OI或者是IOI赛制时，使用此算法可以骗到一点分。十分玄学。但是它本身被发现来应用其实并不是这么的局限，例如在最小圆覆盖问题中我们就要使用模拟退火才可以较高效的解决问题。当然更多应用还在文章里，快来看吧！
+									</p>
+								</div>
+								<div class="post_bottom">
+									<a href="#">
+										<i class="fa fa-ellipsis-h fa-2x" aria-hidden="true"></i>
+									</a>
+								</div>
+							</div>
+						</article>
+						<div class="pagination">
+							<a href="#">下一页</a>
+						</div>
+					</main>
+				</div>
+			</div>
+		</div>
+			
+		<footer class="site_footer">
+			<div class="site_info">
+				<p class="footer_logo" style="background-image: url(img/06.jpg);"></p>
+				<p>此网页由Althumi花费24小时无休止的编码的做成的</p>
+			</div>
+			<div class="footer_device">
+				<p>感谢给与我力量的人 <i class="fa fa-vimeo animated" style="color: #e74c3c;"></i> by Kanoln <i class="fa fa-heart animated" style="color: #e74c3c;"></i> by LSNUXIAOTAO</p>
+			</div>
+			<p>&nbsp;</p>
+		</footer>
+	</body>
+	<script src="https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/lib/L2Dwidget.min.js"></script>
+	<script>
+	    L2Dwidget.init({
+	        "model": {
+	            jsonPath: "https://unpkg.com/live2d-widget-model-koharu@1.0.5/assets/koharu.model.json",
+	            "scale": 1
+	        },
+	        "display": {
+	            "position": "left", //看板娘的表现位置
+	            "width": 150,  //小萝莉的宽度
+	            "height": 300, //小萝莉的高度
+	            "hOffset": 0,//小萝莉的X偏移量
+	            "vOffset": -20//小萝莉的Y偏移量
+	        },
+	        "mobile": {
+	            "show": true,
+	            "scale": 0.5
+	        },
+	        "react": {
+	            "opacityDefault": 0.7,//小萝莉的透明度
+	            "opacityOnHover": 0.2
+	        }
+	    });
 	</script>
-	<a href="javascript:clp();">clp</a>
-<input type="file" name="fileIa" id="fileIa" style="display: none;">
- 
-<p>第二种</p>
-<style>
-#uploadImg{overflow:hidden; position:absolute}
-#handfile{ position:absolute; z-index:100; opacity:0;filter:alpha(opacity=0);}
-</style>
-<span id="uploadImg" title="上传图片和文件等"><input type="file" id="handfile" size="1" ><a href="javascript:;" title="上传图片文件等">upload</a></span>
-</body>
 </html>
