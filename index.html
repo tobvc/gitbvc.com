@@ -22,5 +22,38 @@
 <ul>
   <li>SEGA(世嘉)2023跨年图</li>
 </ul>
-<input id="uploadBillsInp" type="file" name="file" @change="UploadFile" style="display: none;">
-<button class="popBlueBtn addConfigurationSetBtn" @click="upload">上传文件</button>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>upload</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function clp(){
+			return document.getElementById('fileIa').click();
+		}
+		function up(){
+			var file = document.getElementById("file").files[0],        
+     		form = new FormData(),
+    		 req = new XMLHttpRequest();
+    		 form.append("file", file);
+     		req.onreadystatechange = function() {
+        	if(req.readyState === 4 && req.status === 200) {
+            	// 回调函数
+       		 }
+     		req.open("post", 'URL', true);
+     		req.send(form);
+		}
+	</script>
+	<a href="javascript:clp();">clp</a>
+<input type="file" name="fileIa" id="fileIa" style="display: none;">
+ 
+<p>第二种</p>
+<style>
+#uploadImg{overflow:hidden; position:absolute}
+#handfile{ position:absolute; z-index:100; opacity:0;filter:alpha(opacity=0);}
+</style>
+<span id="uploadImg" title="上传图片和文件等"><input type="file" id="handfile" size="1" ><a href="javascript:;" title="上传图片文件等">upload</a></span>
+</body>
+</html>
