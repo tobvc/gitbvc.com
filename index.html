@@ -22,40 +22,7 @@
 <ul>
   <li>SEGA(世嘉)2023跨年图</li>
 </ul>
-<!DOCTYPE HTML>
-<html>
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <script src="./jquery.min.js" type="text/javascript"></script>
-    <title>点击按钮上传文件</title>
-</head>
-<body>
-<input type="file" name="upload" id="upload" style="display: none;" />
-<input type="button" id="uploadFileButton" value="文件上传" />
-<br /><br /><span id="uploadFileName"></span>
-<script type="text/javascript">
-    $('#uploadFileButton').click(function () {
-        $('#upload').click();
-    });
-    $('#upload').click(function () {
-        $('#upload').val('');
-    });
-    $('#upload').on('change', function(){
-        var fileNameStr = $('#upload').val();
-        var index2 = fileNameStr.length;
-        if(fileNameStr.indexOf("/") != -1) {
-            var index1 = fileNameStr.lastIndexOf("/");
-        } else {
-            var index1 = fileNameStr.lastIndexOf("\\");
-        }
-        if (index1 <= -1) {
-            index1 = 0;
-        } else {
-            index1 += 1;
-        }
-        fileNameStr = fileNameStr.substring(index1, index2);
-        $('#uploadFileName').html(fileNameStr);
-    });
-</script>
-</body>
-</html>
+<div class="fileUpload btn btn-primary">
+    <span>Upload</span>
+    <input type="file" class="upload" />
+</div>
