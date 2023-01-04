@@ -1,0 +1,15 @@
+name: Log Webhook Dispatch
+
+on:
+  repository_dispatch:
+    types:
+      - repository_dispatch_remote-repository-dispatch
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    env:
+      PAYLOAD: ${{ toJSON(github.event.client_payload.client_payload) }}
+    steps:
+      - name: log event
+        run: echo $PAYLOAD
