@@ -22,7 +22,5 @@
 <ul>
   <li>SEGA(世嘉)2023跨年图</li>
 </ul>
-<div class="fileUpload btn btn-primary">
-    <span>Upload</span>
-    <input type="file" class="upload" />
-</div>
+<input id="uploadBillsInp" type="file" name="file" @change="UploadFile" style="display: none;">
+<button class="popBlueBtn addConfigurationSetBtn" @click="upload">上传文件</button>
